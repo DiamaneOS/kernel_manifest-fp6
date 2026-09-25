@@ -32,14 +32,14 @@
     <linkfile src="static_analysis" dest="kernel_platform/build/static_analysis" />
     <linkfile src="_wrapper_common.sh" dest="kernel_platform/build/_wrapper_common.sh" />
   </project>
-  <project path="kernel_platform/common" name="kernel_common-6.1" remote="diamaneos" revision="a1d76f2d8922e7bfdc0f1be24a1badf3045381f7">
+  <project path="kernel_platform/common" name="kernel_common-6.1" remote="diamaneos" revision="ee6d08cab486243c93df29ca57331eee5b92c538">
     <linkfile src="." dest="kernel_platform/.source_date_epoch_dir" />
   </project>
   <project path="kernel_platform/external/bazel-skylib" name="kernel_platform/external/bazel-skylib" revision="7fdbc462f5001b7e82f026aa90bd43c494e2a8d8" />
   <project path="kernel_platform/external/dtc" name="kernel_platform/external/dtc" revision="2bc3f4250c591a4519a899f0f62600834a4da693" />
   <project path="kernel_platform/external/python/absl-py" name="kernel_platform/external/python/absl-py" revision="e46584edbb247bf79c74c4f105b6fff18234cee8" />
   <project path="kernel_platform/external/stardoc" name="kernel_platform/external/stardoc" revision="0d74fed6f8d0844f696771e71bc0b071cae99021" />
-  <project path="kernel_platform/msm-kernel" name="kernel_fairphone_qcom" remote="diamaneos" revision="40d4164f778b72f03a76628e6e42d20af66ddb23">
+  <project path="kernel_platform/msm-kernel" name="kernel_fairphone_qcom" remote="diamaneos" revision="dfe1d4295fb47e26b8d2164dfea0ac0e0646fb1b">
     <linkfile src="bazel.WORKSPACE" dest="kernel_platform/WORKSPACE" />
     <linkfile src="build_with_bazel.py" dest="kernel_platform/build_with_bazel.py" />
   </project>
@@ -92,7 +92,7 @@
     <linkfile src="datarmnet_ext_dlkm_vendor_board.mk" dest="vendor/qcom/defs/board-defs/vendor/datarmnet_ext_dlkm_vendor_board.mk" />
     <linkfile src="datarmnet_ext_dlkm_vendor_product.mk" dest="vendor/qcom/defs/product-defs/vendor/datarmnet_ext_dlkm_vendor_product.mk" />
   </project>
-  <project path="vendor/qcom/opensource/display-drivers" name="kernel_fairphone_display" remote="diamaneos" revision="0e1d09a039f7f59e2244d5b2cf086ae518157817">
+  <project path="vendor/qcom/opensource/display-drivers" name="kernel_fairphone_display" remote="diamaneos" revision="a7cb4b823c7d467c392e2ab90d3ebb8a6579b79c">
     <linkfile src="display_driver_product.mk" dest="vendor/qcom/defs/product-defs/vendor/display_driver_product.mk" />
     <linkfile src="display_driver_board.mk" dest="vendor/qcom/defs/board-defs/vendor/display_driver_board.mk" />
   </project>
@@ -139,7 +139,7 @@
   </project>
   <project path="vendor/qcom/opensource/wlan/fw-api" name="platform/vendor/qcom-opensource/wlan/fw-api" revision="11b7398a61abee5996626222558139f3817fa63c" />
   <project path="vendor/qcom/opensource/wlan/platform" name="platform/vendor/qcom-opensource/wlan/platform" revision="9c69b3184709b293f04acc66662076d1ea6d78bd" />
-  <project path="vendor/qcom/opensource/wlan/qca-wifi-host-cmn" name="kernel_fairphone_wlan_common" remote="diamaneos" revision="e903e564d34a0872164ec405cf6d9f06c27e22d7" />
+  <project path="vendor/qcom/opensource/wlan/qca-wifi-host-cmn" name="kernel_fairphone_wlan_common" remote="diamaneos" revision="77df5967ce41a254b2891417ad2a2332be90a8f2" />
   <project path="vendor/qcom/opensource/wlan/qcacld-3.0" name="platform/vendor/qcom-opensource/wlan/qcacld-3.0" revision="fd08604385a181351af0302bb52b3eff22d92ea0" />
   <project path="vendor/qcom/proprietary/audio-devicetree" name="platform/vendor/qcom/proprietary/audio-devicetree" revision="2d52d12f549c9048d3381e869a23ffce1932ffb8" />
   <project path="vendor/qcom/proprietary/bt-devicetree" name="platform/vendor/qcom/proprietary/bt-devicetree" revision="0058fc983ee62ae98f0a2001db481af124a0504f" />
