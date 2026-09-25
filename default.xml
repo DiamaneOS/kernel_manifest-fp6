@@ -144,7 +144,7 @@
   <project path="vendor/qcom/opensource/wlan/fw-api" name="platform/vendor/qcom-opensource/wlan/fw-api" remote="codelinaro" revision="1dfe638abcf0aba66965742ec452c935c69c19b7" />
   <project path="vendor/qcom/opensource/wlan/platform" name="kernel_qcom_wlan_platform" remote="diamaneos" revision="720665f5f67cd705f829258c642ecc27d875ef84" />
   <project path="vendor/qcom/opensource/wlan/qca-wifi-host-cmn" name="kernel_qcom_wlan_common" remote="diamaneos" revision="07b62498c5e075b1a92c049c923f2113026f5519" />
-  <project path="vendor/qcom/opensource/wlan/qcacld-3.0" name="kernel_qcom_qcacld" remote="diamaneos" revision="b93d874403e4dbb5715c17c206cc4ef5024c9528" />
+  <project path="vendor/qcom/opensource/wlan/qcacld-3.0" name="kernel_qcom_qcacld" remote="diamaneos" revision="9370ca19fef33a844435558217ce7bc723a0ca2b" />
   <project path="vendor/qcom/proprietary/audio-devicetree" name="platform/vendor/qcom/proprietary/audio-devicetree" revision="2d52d12f549c9048d3381e869a23ffce1932ffb8" />
   <project path="vendor/qcom/proprietary/bt-devicetree" name="platform/vendor/qcom/proprietary/bt-devicetree" revision="0058fc983ee62ae98f0a2001db481af124a0504f" />
   <project path="vendor/qcom/proprietary/camera-devicetree" name="platform/vendor/qcom/proprietary/camera-devicetree" revision="41489bebf06c9ffc211a2071c937d086e7568032" />
