@@ -3,13 +3,14 @@
      config/kernel-sources-fp6.json and config/patches.json. Do not edit. -->
 <manifest>
   <remote name="fairphone" fetch="https://gerrit-public.fairphone.software/" />
+  <remote name="codelinaro" fetch="https://git.codelinaro.org/clo/la/" />
   <remote name="diamaneos" fetch="https://github.com/DiamaneOS/" />
 
   <default remote="fairphone" sync-j="8" />
 
-  <project path="kernel_platform/bootable/bootloader/edk2" name="abl/tianocore/edk2" revision="eff625234b8c58aa0294c5a8ebb006f08a9338aa" />
-  <project path="kernel_platform/build/bazel_common_rules" name="kernel_platform/build/bazel_common_rules" revision="9ac051a42545593e4a6bda7f11511acb8476f4e2" />
-  <project path="kernel_platform/build/kernel" name="kernel/build" revision="f19534bc201764082056c886279fb69aeb423641">
+  <project path="kernel_platform/bootable/bootloader/edk2" name="abl/tianocore/edk2" remote="codelinaro" revision="09dca949df9515b1d4f702c78fb205d76b3f8043" />
+  <project path="kernel_platform/build/bazel_common_rules" name="kernel_platform/build/bazel_common_rules" remote="codelinaro" revision="9ac051a42545593e4a6bda7f11511acb8476f4e2" />
+  <project path="kernel_platform/build/kernel" name="kernel/build" remote="codelinaro" revision="aa777cca3d5f2443114fe71ccfed9bd74cd7c66a">
     <linkfile src="kleaf/bazel.sh" dest="kernel_platform/tools/bazel" />
     <linkfile src="build_test.sh" dest="kernel_platform/build/build_test.sh" />
     <linkfile src="build_utils.sh" dest="kernel_platform/build/build_utils.sh" />
@@ -35,68 +36,71 @@
   <project path="kernel_platform/common" name="kernel_common-6.1" remote="diamaneos" revision="ee6d08cab486243c93df29ca57331eee5b92c538">
     <linkfile src="." dest="kernel_platform/.source_date_epoch_dir" />
   </project>
-  <project path="kernel_platform/external/bazel-skylib" name="kernel_platform/external/bazel-skylib" revision="7fdbc462f5001b7e82f026aa90bd43c494e2a8d8" />
-  <project path="kernel_platform/external/dtc" name="kernel_platform/external/dtc" revision="2bc3f4250c591a4519a899f0f62600834a4da693" />
-  <project path="kernel_platform/external/python/absl-py" name="kernel_platform/external/python/absl-py" revision="e46584edbb247bf79c74c4f105b6fff18234cee8" />
-  <project path="kernel_platform/external/stardoc" name="kernel_platform/external/stardoc" revision="0d74fed6f8d0844f696771e71bc0b071cae99021" />
-  <project path="kernel_platform/msm-kernel" name="kernel_fairphone_qcom" remote="diamaneos" revision="dfe1d4295fb47e26b8d2164dfea0ac0e0646fb1b">
+  <project path="kernel_platform/external/bazel-skylib" name="kernel_platform/external/bazel-skylib" remote="codelinaro" revision="7fdbc462f5001b7e82f026aa90bd43c494e2a8d8" />
+  <project path="kernel_platform/external/bazelbuild-rules_license" name="kernel_platform/external/bazelbuild-rules_license" remote="codelinaro" revision="f578df4fd057ffe2023728444759535685631548" />
+  <project path="kernel_platform/external/bazelbuild-rules_pkg" name="kernel_platform/external/bazelbuild-rules_pkg" remote="codelinaro" revision="059aaa0ece0c03b731076db6300f50f83d25829a" />
+  <project path="kernel_platform/external/dtc" name="kernel_platform/external/dtc" remote="codelinaro" revision="2bc3f4250c591a4519a899f0f62600834a4da693" />
+  <project path="kernel_platform/external/python/absl-py" name="kernel_platform/external/python/absl-py" remote="codelinaro" revision="e46584edbb247bf79c74c4f105b6fff18234cee8" />
+  <project path="kernel_platform/external/stardoc" name="kernel_platform/external/stardoc" remote="codelinaro" revision="0d74fed6f8d0844f696771e71bc0b071cae99021" />
+  <project path="kernel_platform/msm-kernel" name="kernel_fairphone_qcom" remote="diamaneos" revision="8604cc38de0424a9abbea90e033d3d58946a55ac">
     <linkfile src="bazel.WORKSPACE" dest="kernel_platform/WORKSPACE" />
     <linkfile src="build_with_bazel.py" dest="kernel_platform/build_with_bazel.py" />
+    <linkfile src="qcom_build_extensions" dest="kernel_platform/build/qcom_build_extensions" />
   </project>
   <project path="kernel_platform/msm-kernel/arch/arm64/boot/dts/vendor" name="platform/kernel_platform/qcom/proprietary/devicetree" revision="e54c8cb7d2d1d99026eff5d0d1c858db4739c478" />
   <project path="kernel_platform/prebuilts/asuite" name="kernel_platform/prebuilts/asuite" revision="933fe29a05b097caed99d630727cfc301f770798" />
-  <project path="kernel_platform/prebuilts/bazel/linux-x86_64" name="kernel_platform/prebuilts/bazel/linux-x86_64" revision="eee09422f02e60f28192bcb5a8ce8660baba6706" />
-  <project path="kernel_platform/prebuilts/build-tools" name="kernel_platform/prebuilts/build-tools" revision="3f7cae3e5f7b0cbbb50ececa504e959b5e1a0b1e">
+  <project path="kernel_platform/prebuilts/bazel/linux-x86_64" name="kernel_platform/prebuilts/bazel/linux-x86_64" remote="codelinaro" revision="eee09422f02e60f28192bcb5a8ce8660baba6706" />
+  <project path="kernel_platform/prebuilts/build-tools" name="kernel_platform/prebuilts/build-tools" remote="codelinaro" revision="3f7cae3e5f7b0cbbb50ececa504e959b5e1a0b1e">
     <linkfile src="." dest="kernel_platform/build/prebuilts/build-tools" />
   </project>
-  <project path="kernel_platform/prebuilts/clang-tools" name="kernel_platform/prebuilts/clang-tools" revision="0613fc5443d035335a9541994607bacae03750f2">
+  <project path="kernel_platform/prebuilts/clang-tools" name="kernel_platform/prebuilts/clang-tools" remote="codelinaro" revision="0613fc5443d035335a9541994607bacae03750f2">
     <linkfile src="." dest="kernel_platform/build/prebuilts/clang-tools" />
   </project>
-  <project path="kernel_platform/prebuilts/clang/host/linux-x86" name="kernelplatform/prebuilts-master/clang/host/linux-x86" revision="28b975ada54f8610ed531a6b57253aed10e7c87d" />
-  <project path="kernel_platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" name="kernelplatform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" revision="dd099b5d68822602228e2af66693e61e7b54e0a9">
+  <project path="kernel_platform/prebuilts/clang/host/linux-x86" name="kernelplatform/prebuilts-master/clang/host/linux-x86" remote="codelinaro" revision="9002aa7843a39e9b35bb2d2cbf741cdaf719b981" />
+  <project path="kernel_platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" name="kernelplatform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" remote="codelinaro" revision="dd099b5d68822602228e2af66693e61e7b54e0a9">
     <linkfile src="sysroot" dest="kernel_platform/build/build-tools/sysroot" />
   </project>
-  <project path="kernel_platform/prebuilts/jdk/jdk11" name="kernel_platform/prebuilts/jdk/jdk11" revision="ced68c9308cbc1b6ec3e602dba8d0d56df8b6d73" />
-  <project path="kernel_platform/prebuilts/kernel-build-tools" name="kernel/prebuilts/build-tools" revision="d153b7ab4a4956198957e258d4f370e875c53059">
+  <project path="kernel_platform/prebuilts/jdk/jdk11" name="kernel_platform/prebuilts/jdk/jdk11" remote="codelinaro" revision="ced68c9308cbc1b6ec3e602dba8d0d56df8b6d73" />
+  <project path="kernel_platform/prebuilts/kernel-build-tools" name="kernel/prebuilts/build-tools" remote="codelinaro" revision="d153b7ab4a4956198957e258d4f370e875c53059">
     <linkfile src="." dest="kernel_platform/build/prebuilts/kernel-build-tools" />
   </project>
-  <project path="kernel_platform/prebuilts/ndk-r23" name="kernel_platform/toolchain/prebuilts/ndk/r23" revision="269a5dc9e862f78dc2030d9262f73cb2642b8127" />
+  <project path="kernel_platform/prebuilts/ndk-r23" name="kernel_platform/toolchain/prebuilts/ndk/r23" remote="codelinaro" revision="269a5dc9e862f78dc2030d9262f73cb2642b8127" />
   <project path="kernel_platform/prebuilts/tradefed" name="kernel_platform/tools/tradefederation/prebuilts" revision="47fc8dbfffc41429e87a5e76188b7707d63792f4" />
-  <project path="kernel_platform/tools/mkbootimg" name="kernel_platform/system/tools/mkbootimg" revision="b17f184a20744a7e0a421f901bdf20a23be22b07" />
-  <project path="vendor/nxp/opensource/driver" name="platform/vendor/nxp/opensource/driver" revision="cbd4b1fd28f4681ea74fe038d96f464da4a28e45">
+  <project path="kernel_platform/tools/mkbootimg" name="kernel_platform/system/tools/mkbootimg" remote="codelinaro" revision="b17f184a20744a7e0a421f901bdf20a23be22b07" />
+  <project path="vendor/nxp/opensource/driver" name="platform/vendor/nxp/opensource/driver" remote="codelinaro" revision="c6f0de7127de042241c6f2ac7c60c5deb77d7d85">
     <linkfile src="nfc_kernel_dlkm_vendor_product.mk" dest="vendor/qcom/defs/product-defs/vendor/nfc-kernel-dlkm-vendor-product.mk" />
     <linkfile src="nfc_kernel_dlkm_vendor_board.mk" dest="vendor/qcom/defs/board-defs/vendor/nfc-kernel-dlkm-vendor-board.mk" />
   </project>
-  <project path="vendor/qcom/opensource/audio-kernel" name="platform/vendor/qcom/opensource/audio-kernel-ar" revision="5bfffea5cc2dbb996e773cdc2b5daf1a30602ac1">
+  <project path="vendor/qcom/opensource/audio-kernel" name="platform/vendor/qcom/opensource/audio-kernel-ar" remote="codelinaro" revision="3176d0df29c2930a287d2840121fe76e056cfdba">
     <linkfile src="audio_kernel_vendor_board.mk" dest="vendor/qcom/defs/board-defs/vendor/audio_kernel_vendor_board.mk" />
     <linkfile src="audio_kernel_product_board.mk" dest="vendor/qcom/defs/product-defs/vendor/audio_kernel_product_board.mk" />
   </project>
-  <project path="vendor/qcom/opensource/bt-kernel" name="platform/vendor/qcom-opensource/bt-kernel" revision="00d8248a3643bf6939ff886a6ba6a59d05b43554">
+  <project path="vendor/qcom/opensource/bt-kernel" name="platform/vendor/qcom-opensource/bt-kernel" remote="codelinaro" revision="fea32fbec2ab16ef887c83b741f137ea9fb695d2">
     <linkfile src="bt_kernel_vendor_board.mk" dest="vendor/qcom/defs/board-defs/vendor/bt_kernel_vendor_board.mk" />
     <linkfile src="bt_kernel_product_board.mk" dest="vendor/qcom/defs/product-defs/vendor/bt_kernel_product_board.mk" />
   </project>
-  <project path="vendor/qcom/opensource/camera-kernel" name="kernel_fairphone_camera" remote="diamaneos" revision="a55273983c899774181765543db8eba7f53b527c">
+  <project path="vendor/qcom/opensource/camera-kernel" name="kernel_fairphone_camera" remote="diamaneos" revision="4739adbc3c6e81c6ab4e991e6414e90224b4e2b3">
     <linkfile src="board.mk" dest="vendor/qcom/defs/board-defs/vendor/camera-kernel_board.mk" />
     <linkfile src="product.mk" dest="vendor/qcom/defs/product-defs/vendor/camera-kernel_product.mk" />
   </project>
-  <project path="vendor/qcom/opensource/dataipa" name="kernel_fairphone_dataipa" remote="diamaneos" revision="930769c9a2a12675327d0cc2368a328fe1944d71">
+  <project path="vendor/qcom/opensource/dataipa" name="kernel_fairphone_dataipa" remote="diamaneos" revision="4872c2651e7d4a0793cc774f0d4a89f814beef5c">
     <linkfile src="dataipa_dlkm_vendor_board.mk" dest="vendor/qcom/defs/board-defs/vendor/dataipa_dlkm_vendor_board.mk" />
     <linkfile src="dataipa_dlkm_vendor_product.mk" dest="vendor/qcom/defs/product-defs/vendor/dataipa_dlkm_vendor_product.mk" />
     <linkfile src="dataipa_binary_vendor_product.mk" dest="vendor/qcom/defs/product-defs/vendor/dataipa_binary_vendor_product.mk" />
   </project>
-  <project path="vendor/qcom/opensource/datarmnet" name="platform/vendor/qcom/opensource/datarmnet" revision="1f9d44114ba7129c0c7e0a0b01462ef9c0acd963">
+  <project path="vendor/qcom/opensource/datarmnet" name="platform/vendor/qcom/opensource/datarmnet" remote="codelinaro" revision="068a54349c3cbe72a10d34abf2d3b4363d68d26c">
     <linkfile src="datarmnet_dlkm_vendor_board.mk" dest="vendor/qcom/defs/board-defs/vendor/datarmnet_dlkm_vendor_board.mk" />
     <linkfile src="datarmnet_dlkm_vendor_product.mk" dest="vendor/qcom/defs/product-defs/vendor/datarmnet_dlkm_vendor_product.mk" />
   </project>
-  <project path="vendor/qcom/opensource/datarmnet-ext" name="platform/vendor/qcom/opensource/datarmnet-ext" revision="a00d9d886cc0e47a652578b607383ccf0e02d5bc">
+  <project path="vendor/qcom/opensource/datarmnet-ext" name="platform/vendor/qcom/opensource/datarmnet-ext" remote="codelinaro" revision="95ef911b8582c527a67a0fc3eacbe23a8bea0205">
     <linkfile src="datarmnet_ext_dlkm_vendor_board.mk" dest="vendor/qcom/defs/board-defs/vendor/datarmnet_ext_dlkm_vendor_board.mk" />
     <linkfile src="datarmnet_ext_dlkm_vendor_product.mk" dest="vendor/qcom/defs/product-defs/vendor/datarmnet_ext_dlkm_vendor_product.mk" />
   </project>
-  <project path="vendor/qcom/opensource/display-drivers" name="kernel_fairphone_display" remote="diamaneos" revision="a7cb4b823c7d467c392e2ab90d3ebb8a6579b79c">
+  <project path="vendor/qcom/opensource/display-drivers" name="kernel_fairphone_display" remote="diamaneos" revision="9574dc7f8daad0fc98266f434be35e87f65b6d4d">
     <linkfile src="display_driver_product.mk" dest="vendor/qcom/defs/product-defs/vendor/display_driver_product.mk" />
     <linkfile src="display_driver_board.mk" dest="vendor/qcom/defs/board-defs/vendor/display_driver_board.mk" />
   </project>
-  <project path="vendor/qcom/opensource/dsp-kernel" name="platform/vendor/qcom/opensource/dsp-kernel" revision="92510955132be5961ba4f51f42a49bc77ccbca8f">
+  <project path="vendor/qcom/opensource/dsp-kernel" name="platform/vendor/qcom/opensource/dsp-kernel" remote="codelinaro" revision="5988aecba8fd60eaed2465ad2250ecc2400dcc20">
     <linkfile src="dsp_kernel_board.mk" dest="vendor/qcom/defs/board-defs/vendor/dsp_kernel_board.mk" />
     <linkfile src="dsp_kernel_product.mk" dest="vendor/qcom/defs/product-defs/vendor/dsp_kernel_product.mk" />
   </project>
@@ -104,43 +108,43 @@
     <linkfile src="eva_kernel_product.mk" dest="vendor/qcom/defs/product-defs/vendor/eva_kernel_product.mk" />
     <linkfile src="eva_kernel_board.mk" dest="vendor/qcom/defs/board-defs/vendor/eva_kernel_board.mk" />
   </project>
-  <project path="vendor/qcom/opensource/graphics-kernel" name="kernel_fairphone_graphics" remote="diamaneos" revision="060f120a661d7502c9a695f376aadb3522484c83" />
-  <project path="vendor/qcom/opensource/mm-drivers" name="platform/vendor/opensource/mm-drivers" revision="a7b138e9ad13cfdca39fb86f599fa16c0ced2282">
+  <project path="vendor/qcom/opensource/graphics-kernel" name="kernel_fairphone_graphics" remote="diamaneos" revision="f3470488a0bebd80dadec7312c1389ac73a5fef7" />
+  <project path="vendor/qcom/opensource/mm-drivers" name="platform/vendor/opensource/mm-drivers" remote="codelinaro" revision="a7b138e9ad13cfdca39fb86f599fa16c0ced2282">
     <linkfile src="mm_driver_product.mk" dest="vendor/qcom/defs/product-defs/vendor/mm_driver_product.mk" />
     <linkfile src="mm_driver_board.mk" dest="vendor/qcom/defs/board-defs/vendor/mm_driver_board.mk" />
   </project>
-  <project path="vendor/qcom/opensource/mm-sys-kernel" name="platform/vendor/opensource/mm-sys-kernel" revision="a76f665f9e09fb220d23c71fefa370bb85c68836">
+  <project path="vendor/qcom/opensource/mm-sys-kernel" name="platform/vendor/opensource/mm-sys-kernel" remote="codelinaro" revision="88eb9646a400c3c70d3614c3912af530dd332060">
     <linkfile src="ubwcp_kernel_vendor_board.mk" dest="vendor/qcom/defs/board-defs/vendor/ubwcp_kernel_vendor_board.mk" />
     <linkfile src="ubwcp_kernel_product_board.mk" dest="vendor/qcom/defs/product-defs/vendor/ubwcp_kernel_product_board.mk" />
   </project>
-  <project path="vendor/qcom/opensource/mmrm-driver" name="platform/vendor/opensource/mmrm-driver" revision="caebb7aea11c2bb9c04ef53c1e3c4c486df5b35e">
+  <project path="vendor/qcom/opensource/mmrm-driver" name="platform/vendor/opensource/mmrm-driver" remote="codelinaro" revision="35211a9255b69d52ddc2b82dc8b1dd2840b98868">
     <linkfile src="mmrm_kernel_board.mk" dest="vendor/qcom/defs/board-defs/vendor/mmrm_kernel_board.mk" />
     <linkfile src="mmrm_kernel_product.mk" dest="vendor/qcom/defs/product-defs/vendor/mmrm_kernel_product.mk" />
   </project>
-  <project path="vendor/qcom/opensource/securemsm-kernel" name="kernel_fairphone_securemsm" remote="diamaneos" revision="b041c591488f1f96938e87bb8b835e13aaea1367">
+  <project path="vendor/qcom/opensource/securemsm-kernel" name="kernel_fairphone_securemsm" remote="diamaneos" revision="1ee0ba29a2f578d4c2c6c0105219d082f7d595d8">
     <linkfile src="securemsm_kernel_product_board.mk" dest="vendor/qcom/defs/product-defs/vendor/securemsm_kernel_product_board.mk" />
     <linkfile src="securemsm_kernel_vendor_board.mk" dest="vendor/qcom/defs/board-defs/vendor/securemsm_kernel_vendor_board.mk" />
   </project>
-  <project path="vendor/qcom/opensource/spu-kernel" name="platform/vendor/qcom/opensource/spu-kernel" revision="8209e34e04c393339b8ca49f8f9b9feae3f0908d">
+  <project path="vendor/qcom/opensource/spu-kernel" name="platform/vendor/qcom/opensource/spu-kernel" remote="codelinaro" revision="8209e34e04c393339b8ca49f8f9b9feae3f0908d">
     <linkfile src="spu_driver_board.mk" dest="vendor/qcom/defs/board-defs/vendor/spu_driver_board.mk" />
     <linkfile src="spu_driver_product.mk" dest="vendor/qcom/defs/product-defs/vendor/spu_driver_product.mk" />
   </project>
-  <project path="vendor/qcom/opensource/synx-kernel" name="platform/vendor/opensource/synx-kernel" revision="86615db72c6f2852ab5650f7283a7a244754bb75">
+  <project path="vendor/qcom/opensource/synx-kernel" name="platform/vendor/opensource/synx-kernel" remote="codelinaro" revision="e63a9eaf9544d725a249ede2a72a4fef3b860c96">
     <linkfile src="synx_kernel_product.mk" dest="vendor/qcom/defs/product-defs/vendor/synx_kernel_product.mk" />
     <linkfile src="synx_kernel_board.mk" dest="vendor/qcom/defs/board-defs/vendor/synx_kernel_board.mk" />
   </project>
-  <project path="vendor/qcom/opensource/touch-drivers" name="kernel_fairphone_touch" remote="diamaneos" revision="3c87eb3f2f294513efe6d8247711ee99ea56ac31">
+  <project path="vendor/qcom/opensource/touch-drivers" name="kernel_fairphone_touch" remote="diamaneos" revision="91bc2babbb8db80c64000baa91df5be49c5e3c1c">
     <linkfile src="touch_driver_board.mk" dest="vendor/qcom/defs/board-defs/vendor/touch_driver_board.mk" />
     <linkfile src="touch_driver_product.mk" dest="vendor/qcom/defs/product-defs/vendor/touch_driver_product.mk" />
   </project>
-  <project path="vendor/qcom/opensource/video-driver" name="kernel_fairphone_video" remote="diamaneos" revision="1abcea15d00fc27e605aa9e492cd5e5353fabc97">
+  <project path="vendor/qcom/opensource/video-driver" name="kernel_fairphone_video" remote="diamaneos" revision="604b9c08a0800776baf009061e7979c6a3f2013b">
     <linkfile src="video_kernel_product.mk" dest="vendor/qcom/defs/product-defs/vendor/video_kernel_product.mk" />
     <linkfile src="video_kernel_board.mk" dest="vendor/qcom/defs/board-defs/vendor/video_kernel_board.mk" />
   </project>
-  <project path="vendor/qcom/opensource/wlan/fw-api" name="platform/vendor/qcom-opensource/wlan/fw-api" revision="11b7398a61abee5996626222558139f3817fa63c" />
-  <project path="vendor/qcom/opensource/wlan/platform" name="platform/vendor/qcom-opensource/wlan/platform" revision="9c69b3184709b293f04acc66662076d1ea6d78bd" />
-  <project path="vendor/qcom/opensource/wlan/qca-wifi-host-cmn" name="kernel_fairphone_wlan_common" remote="diamaneos" revision="77df5967ce41a254b2891417ad2a2332be90a8f2" />
-  <project path="vendor/qcom/opensource/wlan/qcacld-3.0" name="platform/vendor/qcom-opensource/wlan/qcacld-3.0" revision="fd08604385a181351af0302bb52b3eff22d92ea0" />
+  <project path="vendor/qcom/opensource/wlan/fw-api" name="platform/vendor/qcom-opensource/wlan/fw-api" remote="codelinaro" revision="1dfe638abcf0aba66965742ec452c935c69c19b7" />
+  <project path="vendor/qcom/opensource/wlan/platform" name="platform/vendor/qcom-opensource/wlan/platform" remote="codelinaro" revision="8cf79ed25f2d9eae20b1873f22e1f187d58fc39f" />
+  <project path="vendor/qcom/opensource/wlan/qca-wifi-host-cmn" name="kernel_fairphone_wlan_common" remote="diamaneos" revision="07b62498c5e075b1a92c049c923f2113026f5519" />
+  <project path="vendor/qcom/opensource/wlan/qcacld-3.0" name="platform/vendor/qcom-opensource/wlan/qcacld-3.0" remote="codelinaro" revision="05fc8e4467c6ca276e4ad303687da362e62baadd" />
   <project path="vendor/qcom/proprietary/audio-devicetree" name="platform/vendor/qcom/proprietary/audio-devicetree" revision="2d52d12f549c9048d3381e869a23ffce1932ffb8" />
   <project path="vendor/qcom/proprietary/bt-devicetree" name="platform/vendor/qcom/proprietary/bt-devicetree" revision="0058fc983ee62ae98f0a2001db481af124a0504f" />
   <project path="vendor/qcom/proprietary/camera-devicetree" name="platform/vendor/qcom/proprietary/camera-devicetree" revision="41489bebf06c9ffc211a2071c937d086e7568032" />
@@ -158,11 +162,11 @@
   <project path="vendor/qcom/proprietary/video-devicetree" name="platform/vendor/qcom/proprietary/video-devicetree" revision="3bc60301c49ef68f70784cb57ddae1df689ec851" />
   <project path="vendor/qcom/proprietary/wlan-devicetree" name="platform/vendor/qcom/proprietary/wlan-devicetree" revision="3ac75d0b258162ca0f6f6df2dfddd79e7392adc0" />
   <project path="vendor/samsung_slsi/nfc" name="vendor/samsung/nfc" revision="94a2731a51ccb5c60cc5f715ee95daa5f71ad5fd" />
-  <project path="vendor/st/opensource/driver" name="platform/vendor/st/opensource/driver" revision="9564cbb00af95b2c05b62977c7c787d92f2b6a67">
+  <project path="vendor/st/opensource/driver" name="platform/vendor/st/opensource/driver" remote="codelinaro" revision="60e8a8fa7512bb3684330c005356e2060ad161a6">
     <linkfile src="nfc_kernel_dlkm_vendor_product.mk" dest="vendor/qcom/defs/product-defs/vendor/nfc-kernel-dlkm-vendor-product-stm.mk" />
     <linkfile src="nfc_kernel_dlkm_vendor_board.mk" dest="vendor/qcom/defs/board-defs/vendor/nfc-kernel-dlkm-vendor-board-stm.mk" />
   </project>
-  <project path="vendor/st/opensource/eSE-driver" name="platform/vendor/st/opensource/eSE-driver" revision="11285a0aef9d24749e8e0a6eae1f7f833a7bb56d">
+  <project path="vendor/st/opensource/eSE-driver" name="platform/vendor/st/opensource/eSE-driver" remote="codelinaro" revision="96e919fb8a6f29037b03f1a2ab73b11b0ef817eb">
     <linkfile src="ese_kernel_product.mk" dest="vendor/qcom/defs/product-defs/vendor/ese_kernel_product.mk" />
     <linkfile src="ese_kernel_board.mk" dest="vendor/qcom/defs/board-defs/vendor/ese_kernel_board.mk" />
   </project>
