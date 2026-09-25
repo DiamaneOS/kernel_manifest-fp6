@@ -3,7 +3,6 @@
      config/kernel-sources-fp6.json and config/patches.json. Do not edit. -->
 <manifest>
   <remote name="fairphone" fetch="https://gerrit-public.fairphone.software/" />
-  <remote name="abhinav-jhanwar" fetch="https://github.com/abhinav-jhanwar/" />
   <remote name="diamaneos" fetch="https://github.com/DiamaneOS/" />
 
   <default remote="fairphone" sync-j="8" />
@@ -33,7 +32,7 @@
     <linkfile src="static_analysis" dest="kernel_platform/build/static_analysis" />
     <linkfile src="_wrapper_common.sh" dest="kernel_platform/build/_wrapper_common.sh" />
   </project>
-  <project path="kernel_platform/common" name="kernel_common-6.1" remote="abhinav-jhanwar" revision="a1d76f2d8922e7bfdc0f1be24a1badf3045381f7">
+  <project path="kernel_platform/common" name="kernel_common-6.1" remote="diamaneos" revision="a1d76f2d8922e7bfdc0f1be24a1badf3045381f7">
     <linkfile src="." dest="kernel_platform/.source_date_epoch_dir" />
   </project>
   <project path="kernel_platform/external/bazel-skylib" name="kernel_platform/external/bazel-skylib" revision="7fdbc462f5001b7e82f026aa90bd43c494e2a8d8" />
