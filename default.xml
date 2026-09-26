@@ -147,7 +147,7 @@
   <project path="vendor/qcom/proprietary/bt-devicetree" name="platform/vendor/qcom/proprietary/bt-devicetree" revision="0058fc983ee62ae98f0a2001db481af124a0504f" />
   <project path="vendor/qcom/proprietary/camera-devicetree" name="platform/vendor/qcom/proprietary/camera-devicetree" revision="41489bebf06c9ffc211a2071c937d086e7568032" />
   <project path="vendor/qcom/proprietary/data-devicetree" name="platform/vendor/qcom/proprietary/data-devicetree" revision="5bc4c7d1fad5e828e3e497d2e47eeba72a403820" />
-  <project path="vendor/qcom/proprietary/display-devicetree" name="platform/vendor/qcom/proprietary/display-devicetree" revision="56394aacd960d7e6d71ef88b9b073f7ea3754be6" />
+  <project path="vendor/qcom/proprietary/display-devicetree" name="kernel_qcom_display-devicetree" remote="diamaneos" revision="d94b9d844cc37cbec58835ce8fdc2eba0fafe5c5" />
   <project path="vendor/qcom/proprietary/dsp-devicetree" name="platform/vendor/qcom/proprietary/dsp-devicetree" revision="1db24dbe32d6cf1a7a7b0d3b40ff8603b57d7d7f" />
   <project path="vendor/qcom/proprietary/eSE-devicetree" name="platform/vendor/qcom/proprietary/eSE-devicetree" revision="97a97695fa13047048b7ee31190375d7faecfe61" />
   <project path="vendor/qcom/proprietary/eva-devicetree" name="platform/vendor/qcom/proprietary/eva-devicetree" revision="caf290576c7464d2d2d1d7cf799908df6fc8c936" />
