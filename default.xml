@@ -33,7 +33,7 @@
     <linkfile src="static_analysis" dest="kernel_platform/build/static_analysis" />
     <linkfile src="_wrapper_common.sh" dest="kernel_platform/build/_wrapper_common.sh" />
   </project>
-  <project path="kernel_platform/common" name="kernel_common-6.1" remote="diamaneos" revision="ee6d08cab486243c93df29ca57331eee5b92c538">
+  <project path="kernel_platform/common" name="kernel_common-6.1" remote="diamaneos" revision="91b7060d83ebd9103feaff3fc7f6db12a0ec34bb">
     <linkfile src="." dest="kernel_platform/.source_date_epoch_dir" />
   </project>
   <project path="kernel_platform/external/bazel-skylib" name="kernel_platform/external/bazel-skylib" remote="codelinaro" revision="7fdbc462f5001b7e82f026aa90bd43c494e2a8d8" />
@@ -42,7 +42,7 @@
   <project path="kernel_platform/external/dtc" name="kernel_platform/external/dtc" remote="codelinaro" revision="2bc3f4250c591a4519a899f0f62600834a4da693" />
   <project path="kernel_platform/external/python/absl-py" name="kernel_platform/external/python/absl-py" remote="codelinaro" revision="e46584edbb247bf79c74c4f105b6fff18234cee8" />
   <project path="kernel_platform/external/stardoc" name="kernel_platform/external/stardoc" remote="codelinaro" revision="0d74fed6f8d0844f696771e71bc0b071cae99021" />
-  <project path="kernel_platform/msm-kernel" name="kernel_qcom_msm-6.1" remote="diamaneos" revision="8604cc38de0424a9abbea90e033d3d58946a55ac">
+  <project path="kernel_platform/msm-kernel" name="kernel_qcom_msm-6.1" remote="diamaneos" revision="50d02443304a5d0932346beebe25f1a192c86c73">
     <linkfile src="bazel.WORKSPACE" dest="kernel_platform/WORKSPACE" />
     <linkfile src="build_with_bazel.py" dest="kernel_platform/build_with_bazel.py" />
     <linkfile src="qcom_build_extensions" dest="kernel_platform/build/qcom_build_extensions" />
