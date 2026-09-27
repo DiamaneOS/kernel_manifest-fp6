@@ -10,7 +10,7 @@
 
   <project path="kernel_platform/bootable/bootloader/edk2" name="kernel_qcom_edk2" remote="diamaneos" revision="fde4e034e68ace629039b114aa55d6715bd1335c" />
   <project path="kernel_platform/build/bazel_common_rules" name="kernel_platform/build/bazel_common_rules" remote="codelinaro" revision="9ac051a42545593e4a6bda7f11511acb8476f4e2" />
-  <project path="kernel_platform/build/kernel" name="kernel_qcom_build" remote="diamaneos" revision="a610317dfeba1132045ebbff93107d62cbb52a71">
+  <project path="kernel_platform/build/kernel" name="kernel/build" remote="codelinaro" revision="aa777cca3d5f2443114fe71ccfed9bd74cd7c66a">
     <linkfile src="kleaf/bazel.sh" dest="kernel_platform/tools/bazel" />
     <linkfile src="build_test.sh" dest="kernel_platform/build/build_test.sh" />
     <linkfile src="build_utils.sh" dest="kernel_platform/build/build_utils.sh" />
@@ -65,7 +65,7 @@
   </project>
   <project path="kernel_platform/prebuilts/ndk-r23" name="kernel_platform/toolchain/prebuilts/ndk/r23" remote="codelinaro" revision="269a5dc9e862f78dc2030d9262f73cb2642b8127" />
   <project path="kernel_platform/tools/mkbootimg" name="kernel_platform/system/tools/mkbootimg" remote="codelinaro" revision="b17f184a20744a7e0a421f901bdf20a23be22b07" />
-  <project path="vendor/nxp/opensource/driver" name="kernel_nxp_nfc" remote="diamaneos" revision="d7a6106dcca46ff515c74a101fb129ffff510a6c">
+  <project path="vendor/nxp/opensource/driver" name="platform/vendor/nxp/opensource/driver" remote="codelinaro" revision="c6f0de7127de042241c6f2ac7c60c5deb77d7d85">
     <linkfile src="nfc_kernel_dlkm_vendor_product.mk" dest="vendor/qcom/defs/product-defs/vendor/nfc-kernel-dlkm-vendor-product.mk" />
     <linkfile src="nfc_kernel_dlkm_vendor_board.mk" dest="vendor/qcom/defs/board-defs/vendor/nfc-kernel-dlkm-vendor-board.mk" />
   </project>
@@ -111,7 +111,7 @@
     <linkfile src="mm_driver_product.mk" dest="vendor/qcom/defs/product-defs/vendor/mm_driver_product.mk" />
     <linkfile src="mm_driver_board.mk" dest="vendor/qcom/defs/board-defs/vendor/mm_driver_board.mk" />
   </project>
-  <project path="vendor/qcom/opensource/mm-sys-kernel" name="kernel_qcom_mm-sys" remote="diamaneos" revision="c9035c290681506abb2518f42cf5335c17a086ef">
+  <project path="vendor/qcom/opensource/mm-sys-kernel" name="platform/vendor/opensource/mm-sys-kernel" remote="codelinaro" revision="88eb9646a400c3c70d3614c3912af530dd332060">
     <linkfile src="ubwcp_kernel_vendor_board.mk" dest="vendor/qcom/defs/board-defs/vendor/ubwcp_kernel_vendor_board.mk" />
     <linkfile src="ubwcp_kernel_product_board.mk" dest="vendor/qcom/defs/product-defs/vendor/ubwcp_kernel_product_board.mk" />
   </project>
@@ -160,11 +160,11 @@
   <project path="vendor/qcom/proprietary/video-devicetree" name="platform/vendor/qcom/proprietary/video-devicetree" revision="3bc60301c49ef68f70784cb57ddae1df689ec851" />
   <project path="vendor/qcom/proprietary/wlan-devicetree" name="platform/vendor/qcom/proprietary/wlan-devicetree" revision="3ac75d0b258162ca0f6f6df2dfddd79e7392adc0" />
   <project path="vendor/samsung_slsi/nfc" name="vendor/samsung/nfc" revision="94a2731a51ccb5c60cc5f715ee95daa5f71ad5fd" />
-  <project path="vendor/st/opensource/driver" name="kernel_st_nfc" remote="diamaneos" revision="7ef048357d2c72484583980a6fe9174e76b05d41">
+  <project path="vendor/st/opensource/driver" name="platform/vendor/st/opensource/driver" remote="codelinaro" revision="60e8a8fa7512bb3684330c005356e2060ad161a6">
     <linkfile src="nfc_kernel_dlkm_vendor_product.mk" dest="vendor/qcom/defs/product-defs/vendor/nfc-kernel-dlkm-vendor-product-stm.mk" />
     <linkfile src="nfc_kernel_dlkm_vendor_board.mk" dest="vendor/qcom/defs/board-defs/vendor/nfc-kernel-dlkm-vendor-board-stm.mk" />
   </project>
-  <project path="vendor/st/opensource/eSE-driver" name="kernel_st_ese" remote="diamaneos" revision="9b20bbbc653997bff85c35da31cf5d6419102896">
+  <project path="vendor/st/opensource/eSE-driver" name="platform/vendor/st/opensource/eSE-driver" remote="codelinaro" revision="96e919fb8a6f29037b03f1a2ab73b11b0ef817eb">
     <linkfile src="ese_kernel_product.mk" dest="vendor/qcom/defs/product-defs/vendor/ese_kernel_product.mk" />
     <linkfile src="ese_kernel_board.mk" dest="vendor/qcom/defs/board-defs/vendor/ese_kernel_board.mk" />
   </project>
