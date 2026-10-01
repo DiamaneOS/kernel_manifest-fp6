@@ -13,7 +13,7 @@ by hand; regenerate it with `diamaneos kernel manifest --output default.xml`.
 
 ## Building
 
-With [DiamaneOS tools](https://github.com/DiamaneOS/tools) on `PATH`:
+With [DiamaneOS tools](https://github.com/DiamaneOS/diamaneos-tools) on `PATH`:
 
 ```sh
 repo init -u https://github.com/DiamaneOS/kernel_manifest-fp6 -b main
