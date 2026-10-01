@@ -24,6 +24,5 @@ diamaneos kernel build --workspace .
 
 `kernel prepare` checks every project against the source plan, verifies the
 fork changes and creates the workspace links a manifest cannot express.
-Once a kernel is accepted, Android builds will use prebuilt kernels published
-in [device_fairphone_FP6-kernels](https://github.com/DiamaneOS/device_fairphone_FP6-kernels)
-and will not need this tree.
+Built kernels are published in
+[device_fairphone_FP6-kernels](https://github.com/DiamaneOS/device_fairphone_FP6-kernels).
