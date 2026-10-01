@@ -33,7 +33,7 @@
     <linkfile src="static_analysis" dest="kernel_platform/build/static_analysis" />
     <linkfile src="_wrapper_common.sh" dest="kernel_platform/build/_wrapper_common.sh" />
   </project>
-  <project path="kernel_platform/common" name="kernel_common-6.1" remote="diamaneos" revision="cc4d2290c01caa79a47ce575def9f487fa53d18b">
+  <project path="kernel_platform/common" name="kernel_common-6.1" remote="diamaneos" revision="20ac0b1fe82d6050018c8041e6c284b7f72f8c56">
     <linkfile src="." dest="kernel_platform/.source_date_epoch_dir" />
   </project>
   <project path="kernel_platform/external/bazel-skylib" name="kernel_platform/external/bazel-skylib" remote="codelinaro" revision="7fdbc462f5001b7e82f026aa90bd43c494e2a8d8" />
@@ -42,7 +42,7 @@
   <project path="kernel_platform/external/dtc" name="kernel_platform/external/dtc" remote="codelinaro" revision="2bc3f4250c591a4519a899f0f62600834a4da693" />
   <project path="kernel_platform/external/python/absl-py" name="kernel_platform/external/python/absl-py" remote="codelinaro" revision="e46584edbb247bf79c74c4f105b6fff18234cee8" />
   <project path="kernel_platform/external/stardoc" name="kernel_platform/external/stardoc" remote="codelinaro" revision="0d74fed6f8d0844f696771e71bc0b071cae99021" />
-  <project path="kernel_platform/msm-kernel" name="kernel_qcom_msm-6.1" remote="diamaneos" revision="315d9e06e0b35526c2c1d4a8fcb88486a65814da">
+  <project path="kernel_platform/msm-kernel" name="kernel_qcom_msm-6.1" remote="diamaneos" revision="7141cd79c8a9dc43d9389c959680c0e2e5d0be97">
     <linkfile src="bazel.WORKSPACE" dest="kernel_platform/WORKSPACE" />
     <linkfile src="build_with_bazel.py" dest="kernel_platform/build_with_bazel.py" />
     <linkfile src="qcom_build_extensions" dest="kernel_platform/build/qcom_build_extensions" />
@@ -77,7 +77,7 @@
     <linkfile src="bt_kernel_vendor_board.mk" dest="vendor/qcom/defs/board-defs/vendor/bt_kernel_vendor_board.mk" />
     <linkfile src="bt_kernel_product_board.mk" dest="vendor/qcom/defs/product-defs/vendor/bt_kernel_product_board.mk" />
   </project>
-  <project path="vendor/qcom/opensource/camera-kernel" name="kernel_qcom_camera" remote="diamaneos" revision="4739adbc3c6e81c6ab4e991e6414e90224b4e2b3">
+  <project path="vendor/qcom/opensource/camera-kernel" name="kernel_qcom_camera" remote="diamaneos" revision="4107baa171b6def00094b4c3858b1bf5f5b40ac4">
     <linkfile src="board.mk" dest="vendor/qcom/defs/board-defs/vendor/camera-kernel_board.mk" />
     <linkfile src="product.mk" dest="vendor/qcom/defs/product-defs/vendor/camera-kernel_product.mk" />
   </project>
@@ -131,7 +131,7 @@
     <linkfile src="synx_kernel_product.mk" dest="vendor/qcom/defs/product-defs/vendor/synx_kernel_product.mk" />
     <linkfile src="synx_kernel_board.mk" dest="vendor/qcom/defs/board-defs/vendor/synx_kernel_board.mk" />
   </project>
-  <project path="vendor/qcom/opensource/touch-drivers" name="kernel_qcom_touch" remote="diamaneos" revision="91bc2babbb8db80c64000baa91df5be49c5e3c1c">
+  <project path="vendor/qcom/opensource/touch-drivers" name="kernel_qcom_touch" remote="diamaneos" revision="a5db5be96a4f963d15920dc8bd5e788ff00f4830">
     <linkfile src="touch_driver_board.mk" dest="vendor/qcom/defs/board-defs/vendor/touch_driver_board.mk" />
     <linkfile src="touch_driver_product.mk" dest="vendor/qcom/defs/product-defs/vendor/touch_driver_product.mk" />
   </project>
@@ -140,7 +140,7 @@
     <linkfile src="video_kernel_board.mk" dest="vendor/qcom/defs/board-defs/vendor/video_kernel_board.mk" />
   </project>
   <project path="vendor/qcom/opensource/wlan/fw-api" name="platform/vendor/qcom-opensource/wlan/fw-api" remote="codelinaro" revision="1dfe638abcf0aba66965742ec452c935c69c19b7" />
-  <project path="vendor/qcom/opensource/wlan/platform" name="kernel_qcom_wlan_platform" remote="diamaneos" revision="720665f5f67cd705f829258c642ecc27d875ef84" />
+  <project path="vendor/qcom/opensource/wlan/platform" name="kernel_qcom_wlan_platform" remote="diamaneos" revision="253e2664daba376aa18857f7b91a75a04dae69b9" />
   <project path="vendor/qcom/opensource/wlan/qca-wifi-host-cmn" name="kernel_qcom_wlan_common" remote="diamaneos" revision="07b62498c5e075b1a92c049c923f2113026f5519" />
   <project path="vendor/qcom/opensource/wlan/qcacld-3.0" name="kernel_qcom_qcacld" remote="diamaneos" revision="9370ca19fef33a844435558217ce7bc723a0ca2b" />
   <project path="vendor/qcom/proprietary/audio-devicetree" name="platform/vendor/qcom/proprietary/audio-devicetree" revision="2d52d12f549c9048d3381e869a23ffce1932ffb8" />
