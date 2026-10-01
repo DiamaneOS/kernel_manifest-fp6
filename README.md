@@ -16,7 +16,7 @@ by hand; regenerate it with `diamaneos kernel manifest --output default.xml`.
 With [DiamaneOS tools](https://github.com/DiamaneOS/diamaneos-tools) on `PATH`:
 
 ```sh
-repo init -u https://github.com/DiamaneOS/kernel_manifest-fp6 -b main
+repo init -u https://github.com/DiamaneOS/kernel_manifest-fp6 -b android17
 repo sync -c
 diamaneos kernel prepare --workspace .
 diamaneos kernel build --workspace .
